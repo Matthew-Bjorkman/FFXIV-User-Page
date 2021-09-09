@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\matth\\source\\repos\\FFXIV-User-Page\\UserPage\\UserPage.csproj": {}
+    "C:\\Users\\mbjorkman\\Desktop\\Testing Solutions\\FFXIV-User-Page\\UserPage\\UserPage.csproj": {}
   },
   "projects": {
-    "C:\\Users\\matth\\source\\repos\\FFXIV-User-Page\\UserPage\\UserPage.csproj": {
+    "C:\\Users\\mbjorkman\\Desktop\\Testing Solutions\\FFXIV-User-Page\\UserPage\\UserPage.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\matth\\source\\repos\\FFXIV-User-Page\\UserPage\\UserPage.csproj",
+        "projectUniqueName": "C:\\Users\\mbjorkman\\Desktop\\Testing Solutions\\FFXIV-User-Page\\UserPage\\UserPage.csproj",
         "projectName": "UserPage",
-        "projectPath": "C:\\Users\\matth\\source\\repos\\FFXIV-User-Page\\UserPage\\UserPage.csproj",
-        "packagesPath": "C:\\Users\\matth\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\matth\\source\\repos\\FFXIV-User-Page\\UserPage\\obj\\",
+        "projectPath": "C:\\Users\\mbjorkman\\Desktop\\Testing Solutions\\FFXIV-User-Page\\UserPage\\UserPage.csproj",
+        "packagesPath": "C:\\Users\\mbjorkman\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mbjorkman\\Desktop\\Testing Solutions\\FFXIV-User-Page\\UserPage\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\matth\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mbjorkman\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -25,7 +28,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net50": {
+          "net5.0": {
+            "targetAlias": "net5.0",
             "projectReferences": {}
           }
         },
@@ -36,7 +40,8 @@
         }
       },
       "frameworks": {
-        "net50": {
+        "net5.0": {
+          "targetAlias": "net5.0",
           "dependencies": {
             "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",
@@ -59,12 +64,25 @@
               "version": "[5.0.7, )"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
-        }
-      },
-      "runtimes": {
-        "win7-x86": {
-          "#import": []
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }
