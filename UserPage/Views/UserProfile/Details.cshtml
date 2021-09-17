@@ -1,0 +1,22 @@
+﻿@model UserPage.Models.UserProfileViewModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>UserProfileViewModel</h4>
+    <hr />
+    <div>
+       Id : @Model.Id 
+    </div>
+    <dl class="row">
+    </dl>
+</div>
+<div>
+    <a asp-action="Index" asp-controller="Home">Return to Home</a>
+    <br />
+    <a asp-action="Index" asp-controller="UserProfile">Return to Search</a>
+</div>

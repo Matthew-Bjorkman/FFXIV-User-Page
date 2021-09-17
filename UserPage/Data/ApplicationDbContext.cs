@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using UserPage.Models;
 
 namespace UserPage.Data
 {
@@ -12,5 +13,6 @@ namespace UserPage.Data
             : base(options)
         {
         }
+        public DbSet<UserPage.Models.UserProfileViewModel> UserProfileViewModel { get; set; }
     }
 }

@@ -9,18 +9,30 @@ using UserPage.Models;
 
 namespace UserPage.Controllers
 {
-    public class HomeController : Controller
+    public class UserProfileController : Controller
     {
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public UserProfileController(ILogger<HomeController> logger)
         {
             _logger = logger;
         }
 
         public IActionResult Index()
         {
-            return View();
+            UserProfileViewModel vm = new UserProfileViewModel();
+
+            return View(vm);
+        }
+
+        public IActionResult Details(int id)
+        {
+            UserProfileViewModel vm = new UserProfileViewModel()
+            {
+                Id = id
+            };
+
+            return View(vm);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
