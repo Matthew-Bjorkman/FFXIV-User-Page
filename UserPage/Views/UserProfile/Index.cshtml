@@ -1,4 +1,4 @@
-﻿@model UserProfileViewModel
+﻿@model UserSearchDto
 @{
     ViewData["Title"] = "User Profile";
 }
@@ -8,7 +8,7 @@
         <h1 class="display-4">User Profile</h1>
     </div>
     <div class="card-body border">
-        @using (Html.BeginForm("Details", "UserProfile", FormMethod.Post))
+        @using (Html.BeginForm("List", "UserProfile", FormMethod.Post))
         {
             <div class="row">
                 <div class="col-lg-4 col-1"></div>
@@ -18,8 +18,18 @@
                             @Html.Label("Search for a User", null, new { @class = "" })
                         </div>
                     </div>
+                    <div class="row">
+                        @Html.Label("Character Name", null, new { @class = "" })
+                    </div>
                     <div class="row pb-2">
-                        @Html.TextBoxFor(x => Model.Id, null, new {@class="w-100"})
+                        @Html.TextBoxFor(x => x.Name, new { placeholder = "Akemi Haruna", @class = "w-100" })
+                        @Html.ValidationMessageFor(x => x.Name, "", new { @class = "text-danger"})
+                    </div>
+                    <div class="row">
+                        @Html.Label("Server Name", null, new { @class = "" })
+                    </div>
+                    <div class="row pb-2">
+                        @Html.TextBoxFor(x => x.Server, new { placeholder = "Faerie", @class = "w-100" })
                     </div>
                     <div class="row">
                         <button type="submit" class="btn btn-primary w-100">

@@ -12,6 +12,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using UserPage.Data;
+using UserPage.Utilities;
 
 namespace UserPage
 {
@@ -35,6 +36,13 @@ namespace UserPage
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
+
+            services.Configure<ApplicationConfiguration>(Configuration.GetSection("ApplicationConfiguration"));
+
+            services.AddHttpClient<ILodestoneAPIClient, LodestoneAPIClient>((provider, client) =>
+            {
+                client.BaseAddress = new Uri(Configuration.GetValue<string>(ApplicationConfigurationFields.LodestoneApiUrl).ToString());
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

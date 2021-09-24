@@ -13,6 +13,6 @@ namespace UserPage.Data
             : base(options)
         {
         }
-        public DbSet<UserPage.Models.UserProfileViewModel> UserProfileViewModel { get; set; }
+        public DbSet<UserSearchDto> UserProfileViewModel { get; set; }
     }
 }

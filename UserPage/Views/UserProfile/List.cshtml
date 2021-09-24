@@ -1,0 +1,43 @@
+﻿@model UserPage.Models.UserSearchViewModel
+@{
+    ViewData["Title"] = "List";
+}
+
+<div>
+    <div>
+        <div class="card-header border">
+            <h1 class="display-4">Results</h1>
+        </div>
+        @foreach (var user in Model.UserList)
+        {
+            <div class="card-body border">
+                <div class="row">
+                    <div class="col-2">
+                        <img src="@user.AvatarUrl" alt="character-image">
+                    </div>
+                    <div class="col-10">
+                        <div class="row">
+                            <div class="col-2">
+                                @Html.LabelFor(x => user.Name)
+                            </div>
+                            <div class="col-10">
+                                @Html.Label(user.Name)
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2">
+                                @Html.LabelFor(x => user.Server)
+                            </div>
+                            <div class="col-10">
+                                @Html.Label(user.Server)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    <div>
+        <a asp-action="Index" asp-controller="UserProfile">Return to Search</a>
+    </div>
+</div>
