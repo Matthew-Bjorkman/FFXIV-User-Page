@@ -41,9 +41,13 @@
 </div>
 
 <div>
-    @Html.ActionLink("Return to Search", "List", "UserProfile", new 
-    { 
-        Name = Context.Session.GetString(SessionFields.LastUserSearch).Split(',')[0], 
-        Server = Context.Session.GetString(SessionFields.LastUserSearch).Split(',')[1]
-    }, null)
+    <div class="row">
+        <div class="col-12 ml-2">
+            @Html.ActionLink("Return to Search", "List", "UserProfile", new
+            {
+                Name = Context.Session.GetString(SessionFields.LastUserSearch).Split(',')[0],
+                Server = Context.Session.GetString(SessionFields.LastUserSearch).Split(',')[1]
+            }, null)
+        </div>
+    </div>
 </div>
