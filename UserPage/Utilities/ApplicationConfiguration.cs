@@ -9,9 +9,4 @@ namespace UserPage
     {
         public string LodestoneApiUri { get; set; }
     }
-
-    public class ApplicationConfigurationFields
-    {
-        public const string LodestoneApiUrl = "ApplicationConfiguration:LodestoneApiUri";
-    }
 }

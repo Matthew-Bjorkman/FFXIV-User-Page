@@ -21,7 +21,7 @@
                                 @Html.LabelFor(x => user.Name)
                             </div>
                             <div class="col-10">
-                                @Html.Label(user.Name)
+                                @Html.ActionLink(user.Name, "Details", "UserProfile", new {id = user.Id})
                             </div>
                         </div>
                         <div class="row">

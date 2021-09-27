@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace UserPage.Models
 {
-    public class UserSearchDto
+    public class UserViewModel
     {
-        [StringLength(21, MinimumLength = 1)]
-        [Required(ErrorMessage = "Name is required.")]
+        public string Avatar { get; set; }
+        public string Portrait { get; set; }
+        public int ID { get; set; }
+        public string Lang { get; set; }
         public string Name { get; set; }
         public string Server { get; set; }
     }

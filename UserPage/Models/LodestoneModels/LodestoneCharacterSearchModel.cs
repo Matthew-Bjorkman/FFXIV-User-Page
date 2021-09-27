@@ -5,7 +5,8 @@ using System.Threading.Tasks;
 
 namespace UserPage.Models
 {
-    public class LodestoneCharacterModel
+    // endpoint: /character/search
+    public class LodestoneCharacterSearchModel
     {
         public string Avatar { get; set; }
         public int FeastMatches { get; set; }
